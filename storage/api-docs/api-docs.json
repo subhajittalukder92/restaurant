@@ -1,0 +1,1213 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Customer App",
+        "description": "",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/app/customer/addresses": {
+            "get": {
+                "tags": [
+                    "Customer App: All Addresses"
+                ],
+                "operationId": "71ae76ae62802a8de33d4c66be5b1cc9",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Customer App: Store Address"
+                ],
+                "operationId": "33eebbafd283b5f49dcdb18ad92814a2",
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "street",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "landmark",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "city",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "state",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "zipcode",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "country",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "contact",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "digit"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/app/customer/addresses/{id}": {
+            "get": {
+                "tags": [
+                    "Customer App: Show Specific Address"
+                ],
+                "operationId": "cbf12dab6feea12f6fd1114b80205af5",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Failure"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Customer App: Edit Address"
+                ],
+                "operationId": "67f8c352e446135376cf8f313d1c9eee",
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "street",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "landmark",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "city",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "state",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "zipcode",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "country",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "contact",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "digit"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Customer App: Delete Address"
+                ],
+                "operationId": "83fc5a0d30795413c648c19df3a7e0ce",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Failure"
+                    }
+                }
+            }
+        },
+        "/api/app/customer/send-otp": {
+            "post": {
+                "tags": [
+                    "Customer App: Forget Password: Send Otp"
+                ],
+                "operationId": "557f2793e297365d4645aff204af63c7",
+                "parameters": [
+                    {
+                        "name": "mobile",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/app/customer/check-otp": {
+            "post": {
+                "tags": [
+                    "Customer App: Forget Password: Check Otp"
+                ],
+                "operationId": "fbeb322f39bcb84ebb431220df2c7b1f",
+                "parameters": [
+                    {
+                        "name": "otp",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/app/customer/reset-password": {
+            "post": {
+                "tags": [
+                    "Customer App: Forget Password: Reset Password"
+                ],
+                "operationId": "5b86b9bee1ec0c3c49d43ad7b7afd2cf",
+                "parameters": [
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "token",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/app/customer/carts?user_id={id}": {
+            "get": {
+                "tags": [
+                    "Customer App: View Cart"
+                ],
+                "operationId": "0f8b97c83e801e1b6756809f6a1df246",
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "Numeric"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/app/customer/carts": {
+            "post": {
+                "tags": [
+                    "Customer App: Add to cart"
+                ],
+                "operationId": "e0629589bdbe4cd13e715e32da4ab0a9",
+                "parameters": [
+                    {
+                        "name": "menu_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "Numeric"
+                        }
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "Numeric"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/app/customer/update-cart": {
+            "put": {
+                "tags": [
+                    "Customer App: Update cart"
+                ],
+                "operationId": "c474c7e41afe495c39b14ffb957e93b0",
+                "parameters": [
+                    {
+                        "name": "menu_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "Numeric"
+                        }
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "Numeric"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/app/customer/menus-status": {
+            "get": {
+                "tags": [
+                    "Customer App: Check Cart Menus Status"
+                ],
+                "operationId": "7736ed1c8582981594b039250adefd37",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/app/customer/coin-redeem?restaurant_id={restaurant_id}": {
+            "get": {
+                "tags": [
+                    "Customer App: View Redeem details"
+                ],
+                "operationId": "7753280ddee19e8ca280a896e1ef9a04",
+                "parameters": [
+                    {
+                        "name": "restaurant_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "Numeric"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/app/customer/apply-coin": {
+            "post": {
+                "tags": [
+                    "Customer App: Apply Coin"
+                ],
+                "operationId": "2dde0eced00f61b43fe89474f0071571",
+                "parameters": [
+                    {
+                        "name": "retaurant_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "Numeric"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/app/customer/registration": {
+            "post": {
+                "tags": [
+                    "Customer App: Customer Registration"
+                ],
+                "operationId": "4625f3b52cde27b26a83af5924d75db7",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "mobile",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/app/customer/edit-profile": {
+            "put": {
+                "tags": [
+                    "Customer App: Edit Profile"
+                ],
+                "operationId": "6e5bb2b7f904d03530cb73681744bc6b",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "mobile",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "file",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/app/customer/login": {
+            "post": {
+                "tags": [
+                    "Customer App: Login"
+                ],
+                "operationId": "3480f8fae5a9795e9c1c4333f18d3dd2",
+                "parameters": [
+                    {
+                        "name": "mobile",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Failure"
+                    }
+                }
+            }
+        },
+        "/api/app/customer/dashboard": {
+            "get": {
+                "tags": [
+                    "Customer App: Customer Dashboard"
+                ],
+                "operationId": "8bb6b123e4794996510e61fb09163b64",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Failure"
+                    }
+                }
+            }
+        },
+        "/api/app/customer/logout": {
+            "post": {
+                "tags": [
+                    "Customer App: Logout"
+                ],
+                "operationId": "810c8ec596010219f95a8ac6b862a637",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Failure"
+                    }
+                }
+            }
+        },
+        "/api/app/customer/edit-password": {
+            "put": {
+                "tags": [
+                    "Customer App: edit Password"
+                ],
+                "operationId": "d53f151ddd23f8f7141e8a2b3989f346",
+                "parameters": [
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "confirm_password",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Failure"
+                    }
+                }
+            }
+        },
+        "/api/app/customer/menu-categories": {
+            "get": {
+                "tags": [
+                    "Customer App: MenuCategory All"
+                ],
+                "operationId": "05dc141b3d8353d6145cdecb7cb22d58",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/app/customer/menu-categories/{id}": {
+            "get": {
+                "tags": [
+                    "Customer App: Show Specific Menu Category"
+                ],
+                "operationId": "f2f24b81d19eef1432d6fc3c892eee15",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Failure"
+                    }
+                }
+            }
+        },
+        "/api/app/customer/menus?restaurant_id={id}&category_id={id}&user_id={id}": {
+            "get": {
+                "tags": [
+                    "Customer App: Menu All"
+                ],
+                "operationId": "9a6e08877973800a967717af3fc7016b",
+                "parameters": [
+                    {
+                        "name": "restaurant_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "Numeric"
+                        }
+                    },
+                    {
+                        "name": "category_id",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "Numeric"
+                        }
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "Numeric"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/app/customer/popular-menus?restaurant_id={id}&user_id={id}": {
+            "get": {
+                "tags": [
+                    "Customer App: Popular Menus"
+                ],
+                "operationId": "2ba747967c028506c9ac18a2265f3fdd",
+                "parameters": [
+                    {
+                        "name": "restaurant_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "Numeric"
+                        }
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "Numeric"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Failure"
+                    }
+                }
+            }
+        },
+        "/api/app/customer/create-feedback": {
+            "post": {
+                "tags": [
+                    "Customer App: Create Feedback"
+                ],
+                "operationId": "6195dabc497afd3035ce387856d5f410",
+                "parameters": [
+                    {
+                        "name": "order_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "Numeric"
+                        }
+                    },
+                    {
+                        "name": "rating",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "Numeric"
+                        }
+                    },
+                    {
+                        "name": "feedback",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "String"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/app/customer/place-order": {
+            "post": {
+                "tags": [
+                    "Customer App: Place Order"
+                ],
+                "operationId": "3558f0244056d1fcbb7ba9cca94cf313",
+                "parameters": [
+                    {
+                        "name": "delivery_address_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "Numeric"
+                        }
+                    },
+                    {
+                        "name": "txn_id",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "Numeric"
+                        }
+                    },
+                    {
+                        "name": "txn_status",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "Numeric"
+                        }
+                    },
+                    {
+                        "name": "setting_name",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "redeem_coin",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "Numeric"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/app/customer/order-history": {
+            "get": {
+                "tags": [
+                    "Customer App: Order History"
+                ],
+                "operationId": "fb5659ac9871ac36eb8501e5e57a88d6",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/app/customer/settings/{restaurant-id}": {
+            "get": {
+                "tags": [
+                    "Customer App: All Settings"
+                ],
+                "operationId": "7db22ae858081cc0bbdb5d846fb7b013",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/app/customer/sliders": {
+            "post": {
+                "tags": [
+                    "Customer App: View Slider By Restaurant Id"
+                ],
+                "operationId": "e3fd16bc37a41d35ed53f1bf6db15288",
+                "parameters": [
+                    {
+                        "name": "restaurant_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "numeric"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/app/customer/my-rewards": {
+            "get": {
+                "tags": [
+                    "Customer App: My Rewards"
+                ],
+                "operationId": "58d8b417b7889dedfe7f5a63eedb1baa",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/app/customer/check-zipcode": {
+            "post": {
+                "tags": [
+                    "Customer App: Check Zipcode By Restaurant Id"
+                ],
+                "operationId": "6c587f7e0c7040d1639fc1f5d37b9cba",
+                "parameters": [
+                    {
+                        "name": "restaurant_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "numeric"
+                        }
+                    },
+                    {
+                        "name": "zipcode",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/app/delivery-boy/orders?type={pending/delivered}&id={id}": {
+            "get": {
+                "tags": [
+                    "Delivery Boy App: All Orders / Orders Based on type/ Order By Id"
+                ],
+                "operationId": "09d390bedf6db7d9f7a2ea24fc9a618c",
+                "parameters": [
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "401": {
+                        "description": "Failure"
+                    }
+                }
+            }
+        },
+        "/api/app/delivery-boy/deliver-orders/{order-id}": {
+            "put": {
+                "tags": [
+                    "Delivery Boy App: Change Status to Delivered(delivered) / Not Delivered(not_delivered) of a specific order"
+                ],
+                "operationId": "2d01d95920da6637d551f95f21e3e469",
+                "parameters": [
+                    {
+                        "name": "order_status",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "delivery_notes",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Failure"
+                    }
+                }
+            }
+        },
+        "/api/app/delivery-boy/edit-profile": {
+            "put": {
+                "tags": [
+                    "Customer App: Edit Profile"
+                ],
+                "operationId": "6ce7f4927fa500c3a96e4fd2fd485413",
+                "parameters": [
+                    {
+                        "name": "file",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/app/delivery-boy/login": {
+            "post": {
+                "tags": [
+                    "Delivery Boy App: Login"
+                ],
+                "operationId": "c2a68769afd1e3853ef92c8a80dc7fdd",
+                "parameters": [
+                    {
+                        "name": "mobile",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "password",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Failure"
+                    }
+                }
+            }
+        },
+        "/api/app/delivery-boy/dashboard": {
+            "get": {
+                "tags": [
+                    "Delivery Boy App: Delivery Boy Dashboard"
+                ],
+                "operationId": "ee8c0ec97198c0881ef57309e12b81b7",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Failure"
+                    }
+                }
+            }
+        },
+        "/api/app/delivery-boy/logout": {
+            "post": {
+                "tags": [
+                    "Delivery Boy App: Logout"
+                ],
+                "operationId": "64e0a077295c8b56ee7a0232fac90a12",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Failure"
+                    }
+                }
+            }
+        },
+        "/api/app/delivery-boy/scan-code": {
+            "put": {
+                "tags": [
+                    "Delivery Boy App: Scan Code & Assign Delivery Boy to a Specific Order"
+                ],
+                "operationId": "50f18a5d718d4566f19976922c73fb08",
+                "parameters": [
+                    {
+                        "name": "order_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "delivery_boy_id",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    },
+                    "401": {
+                        "description": "Failure"
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}
